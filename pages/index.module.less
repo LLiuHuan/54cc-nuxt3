@@ -1,0 +1,277 @@
+/*公共*/
+// -
+.list_box {
+    display:flex;
+    align-items: flex-start;
+}
+
+/*隐藏图片 悬浮显示小图*/
+// -
+.hide_list {
+    margin-bottom:35px;
+    border-bottom:1px dotted #ddd;
+    padding-bottom:40px;
+}
+
+.hide_list:hover .hide_pic {
+    transform:translateY(100%);
+}
+
+.hide_list:hover .hide_img {
+    transform:translateY(0%);
+}
+
+// -
+.hide_left {
+    float:left;
+    width:180px;
+    height:180px;
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+}
+
+// -
+.hide_box {
+    position:relative;
+}
+
+// -
+.hide_img {
+    width:100%;
+    height:180px;
+    border-radius:3px;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateY(-100%);
+    transition:0.35s ease-in-out;
+}
+// -
+.hide_img img {
+    transition:0.8s;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+// -
+.hide_basic {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    transform:translateY(0%);
+    transition:0.35s ease-in-out;
+}
+
+// -
+.hide_frame {
+    padding:15.5px 0px;
+    text-align:center;
+}
+
+// -
+.hide_day {
+    font-size:85px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+// -
+.hide_mon {
+    font-size:13px;
+}
+
+.hide_right {
+    margin-left:20px;
+}
+
+// -
+.list_post {
+    display:flex;
+    flex:1 1 auto;
+    flex-direction:column;
+    text-align: left;
+}
+
+// -
+.list_body {
+    -ms-flex:1 1 auto;
+    flex:1 1 auto;
+}
+
+// -
+.hide_title {
+    margin-bottom:0;
+    margin-top:0;
+    font-size:20px;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+}
+
+// -
+.hide_title>a, .sm_time span>a {
+    transition:0.3s ease-in-out;
+}
+
+// -
+.hide_title>a:hover, .sm_time span>a:hover {
+    color:#f12349 !important;
+}
+
+// -
+.sm_time {
+    font-size:14px;
+    margin-top:15px;
+    color:#969fb7;
+}
+// -
+.sm_time span,.sm_time time {
+    color:#454b58;
+}
+
+// -
+.hide_excerpt {
+    margin-top:14px;
+    font-size:15px;
+    line-height:26px;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+}
+
+.hide_foot .more {
+    font-weight:600;
+    font-size:14px;
+}
+.hide_foot .more i {
+    position:relative;
+    top:1px;
+}
+.hide_foot .liuyan {
+    font-size:13px;
+    font-weight:600;
+}
+.hide_foot .liuyan i {
+    font-weight:600;
+    position:relative;
+    top:1px;
+}
+
+
+/*大图*/
+
+.index_bg_box {
+    margin-bottom:24px;
+}
+// -
+.index_bg_img {
+    width:100%;
+    height:381px;
+    overflow:hidden;
+    border-radius:3px;
+}
+// -
+.index_bg_img img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:3px;
+    transition:0.8s;
+}
+// -
+.index_list_box {
+    display:flex;
+}
+// -
+.index_bg_time {
+    float:left;
+    padding:5.5px 35px;
+    text-align:center;
+}
+// -
+.index_bg_day {
+    font-size:80px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+// -
+.index_bg_mon {
+    font-size:13px;
+}
+// -
+.index_bg_post {
+    margin-left:20px;
+}
+// -
+.index_bg_title {
+    margin-top:0;
+    margin-bottom:0;
+    font-size:20px;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+}
+// -
+.index_bg_excerpt {
+    margin-top:14px;
+    font-size:15px;
+    line-height:26px;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+}
+// -
+.index_bg_foot {
+    margin-top:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.index_bg_foot .more {
+    font-weight:600;
+    font-size:14px;
+}
+.index_bg_foot .more i {
+    position:relative;
+    top:2px;
+}
+.index_bg_foot .liuyan {
+    font-size:13px;
+    font-weight:600;
+}
+.index_bg_foot .liuyan i {
+    font-weight:600;
+    position:relative;
+    top:1px;
+}
+
+/*反转色 先放着*/
+.nice-dark-mode .index_hide_list,.nice-dark-mode .index_bg_list,.nice-dark-mode .index_sm_list {
+    border-bottom:1px dotted #777;
+}
+
+
+.index_bg_foot>.more>a:hover,.index_sm_foot>.more>a:hover,.index_hide_foot>.more>a:hover,.popular_foot .more>a:hover {
+    margin-right:3px;
+}
+.post_pic_img img:hover,.popular_img img:hover,.index_bg_img img:hover,.index_sm_img img:hover,.index_hide_img img:hover {
+    -webkit-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    transform:scale(1.1);
+}
+.phone_img img.lazy,.post_pic_img img.lazy,.popular_img img.lazy,.index_bg_img img.lazy,.index_sm_img img.lazy,.index_hide_img img.lazy {
+    filter:blur(25px);
+    background-color:#f0f0f0;
+    opacity:0;
+}
+.phone_img img.loaded,.post_pic_img img.loaded,.popular_img img.loaded,.index_bg_img img.loaded,.index_sm_img img.loaded,.index_hide_img img.loaded {
+    filter:blur(0px);
+    opacity:1;
+}
